@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maître Jordan Morozof - Office notarial à Cagnes-sur-Mer. Accédez au site de l'office, au profil LinkedIn, au téléphone, à l'e-mail et à l'itinéraire.">
+  <title>Maître Jordan Morozof - Notaire</title>
+  <style>
+    :root{
+      --bg:#071a33;
+      --bg2:#0b2344;
+      --panel:rgba(255,255,255,.05);
+      --text:#f7f1e8;
+      --muted:#c9d4df;
+      --line:rgba(255,255,255,.12);
+      --gold:#d8b56c;
+      --gold2:#b9944d;
+      --shadow:0 22px 60px rgba(0,0,0,.28);
+      --radius:28px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Georgia","Times New Roman",serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, rgba(216,181,108,.15), transparent 35%),
+        linear-gradient(180deg, var(--bg2) 0%, var(--bg) 100%);
+    }
+    .page{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .panel{
+      width:100%;
+      max-width:680px;
+      border-radius:var(--radius);
+      overflow:hidden;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(6px);
+    }
+    .hero{
+      padding:34px 28px 26px;
+      text-align:center;
+      border-bottom:1px solid var(--line);
+      background:
+        radial-gradient(circle at top, rgba(216,181,108,.16), transparent 45%),
+        linear-gradient(180deg, rgba(7,26,51,.92), rgba(7,26,51,.84));
+    }
+    .logo{
+      width:128px;
+      height:128px;
+      margin:0 auto 16px;
+      display:block;
+      object-fit:contain;
+      border-radius:18px;
+      background:transparent;
+    }
+    .kicker{
+      margin:0 0 10px;
+      text-transform:uppercase;
+      letter-spacing:.24em;
+      font-size:11px;
+      color:rgba(247,241,232,.76);
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    h1{
+      margin:0;
+      font-size:34px;
+      line-height:1.08;
+      font-weight:700;
+      color:#ffffff;
+    }
+    .role{
+      margin:12px 0 0;
+      font-size:18px;
+      color:var(--gold);
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight:700;
+      letter-spacing:.08em;
+    }
+    .sub{
+      margin:8px 0 0;
+      font-size:15px;
+      color:rgba(255,255,255,.72);
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .content{
+      padding:24px 24px 28px;
+    }
+    .details{
+      display:grid;
+      gap:12px;
+      margin-bottom:20px;
+    }
+    .box{
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:15px 16px;
+      background:rgba(255,255,255,.04);
+    }
+    .label{
+      display:block;
+      margin-bottom:4px;
+      font-size:11px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.72);
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .value{
+      margin:0;
+      font-size:16px;
+      color:var(--text);
+      font-family:Arial, Helvetica, sans-serif;
+    }
+    .value a{
+      color:var(--text);
+      text-decoration:none;
+    }
+    .value a:hover{color:var(--gold); text-decoration:underline}
+    .actions{
+      display:grid;
+      gap:12px;
+    }
+    .row{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+    a.btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      text-decoration:none;
+      border-radius:14px;
+      border:1px solid transparent;
+      padding:12px 14px;
+      text-align:center;
+      font-family:Arial, Helvetica, sans-serif;
+      font-size:15px;
+      font-weight:700;
+      transition:all .15s ease;
+    }
+    .primary{
+      background:linear-gradient(180deg, var(--gold), var(--gold2));
+      color:#13213a;
+    }
+    .primary:hover{filter:brightness(1.04)}
+    .ghost{
+      background:rgba(255,255,255,.05);
+      color:#ffffff;
+      border-color:rgba(255,255,255,.16);
+    }
+    .ghost:hover{
+      background:rgba(255,255,255,.09);
+      border-color:rgba(216,181,108,.40);
+    }
+    .note{
+      margin:18px 0 0;
+      padding-top:16px;
+      border-top:1px solid var(--line);
+      color:rgba(255,255,255,.74);
+      font-size:14px;
+      line-height:1.6;
+      font-family:Arial, Helvetica, sans-serif;
+      text-align:center;
+    }
+    .footer{
+      padding:16px 24px 22px;
+      text-align:center;
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.56);
+      border-top:1px solid var(--line);
+      font-family:Arial, Helvetica, sans-serif;
+      background:rgba(255,255,255,.02);
+    }
+    @media (max-width:560px){
+      .page{padding:14px}
+      h1{font-size:27px}
+      .role{font-size:16px}
+      .row{grid-template-columns:1fr}
+      .hero{padding:28px 18px 20px}
+      .content{padding:18px}
+      .logo{width:108px;height:108px}
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="panel">
+      <header class="hero">
+        <img class="logo" src="Marianne-or-2-1.png" alt="Marianne des notaires">
+        <p class="kicker">Office notarial</p>
+        <h1>Maître Jordan Morozof</h1>
+        <p class="role">Notaire</p>
+        <p class="sub">Cagnes-sur-Mer · Côte d’Azur</p>
+      </header>
+
+      <section class="content">
+        <div class="details">
+          <div class="box">
+            <span class="label">Adresse</span>
+            <p class="value">73 avenue de la gare, 06800 Cagnes-sur-Mer</p>
+          </div>
+
+          <div class="box">
+            <span class="label">Téléphone</span>
+            <p class="value"><a href="tel:0415541353">04.15.54.13.53</a></p>
+          </div>
+
+          <div class="box">
+            <span class="label">E-mail</span>
+            <p class="value"><a href="mailto:morozof.jordan@notaires.fr">morozof.jordan@notaires.fr</a></p>
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="https://www.notaires.fr/fr/notaire/jordan-morozof" target="_blank" rel="noopener noreferrer">Site de l’office</a>
+          <a class="btn ghost" href="https://fr.linkedin.com/in/jordan-morozof-b153a61b2" target="_blank" rel="noopener noreferrer">Profil LinkedIn</a>
+
+          <div class="row">
+            <a class="btn ghost" href="tel:0415541353">Appeler</a>
+            <a class="btn ghost" href="mailto:morozof.jordan@notaires.fr">Envoyer un e-mail</a>
+          </div>
+
+          <div class="row">
+            <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=73%20avenue%20de%20la%20gare%2C%2006800%20Cagnes-sur-Mer" target="_blank" rel="noopener noreferrer">Plan Google Maps</a>
+            <a class="btn ghost" href="https://waze.com/ul?q=73%20avenue%20de%20la%20gare%2C%2006800%20Cagnes-sur-Mer" target="_blank" rel="noopener noreferrer">Itinéraire Waze</a>
+          </div>
+        </div>
+
+        <p class="note">Un point d’entrée unique pour accéder aux informations de l’office, contacter le cabinet et lancer l’itinéraire.</p>
+      </section>
+
+      <div class="footer">Maître Jordan Morozof</div>
+    </main>
+  </div>
+</body>
+</html>
